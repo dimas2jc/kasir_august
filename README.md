@@ -20,3 +20,9 @@ cp .env.example .env
 ```sh
 composer install
 ```
+
+<h4>Generate application key</h4>
+
+```sh
+php artisan key:generate
+```
