@@ -25,3 +25,21 @@ Route::get('login', function () {
 Route::get('recovery-password', function () {
     return view('Auth.recovery-password');
 })->name('recovery-password');
+
+// For Owner
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// For Admin Kasir
