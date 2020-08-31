@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
 Route::get('/', function () {
     return view('dashboard');
 })->name('dashboard');
@@ -25,3 +26,12 @@ Route::get('login', function () {
 Route::get('recovery-password', function () {
     return view('Auth.recovery-password');
 })->name('recovery-password');
+
+// owner
+
+Route::get('/dataPegawai', function () {
+    return view('dataPegawai');
+});
+Route::get('/laporan', function () {
+    return view('laporan');
+});

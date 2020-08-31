@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+@section('title','Dashboard')
 @section('head')
     <!-- Daterangepicker -->
     <link rel="stylesheet" href="{{ url('vendors/datepicker/daterangepicker.css') }}" type="text/css">
