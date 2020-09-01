@@ -10,6 +10,7 @@
             <th>Id Pegawai</th>
             <th>Nama</th>
             <th>Email</th>
+            <th>Password</th>
             <th>Jenis Kelamin</th>
             <th>Alamat</th>
             <th>Aksi</th>
@@ -20,11 +21,12 @@
             <td>1</td>
             <td>Cloudias Imani Pradana</td>
             <td>danapradana30@gmail.com</td>
+            <td>Cloumus30</td>
             <td>Laki-laki</td>
             <td>Kuwik</td>
             <td>
-                <button type="button" class="btn btn-success">Edit</button>
-                <button type="button" class="btn btn-danger">Delete</button>
+                <button type="submit" class="btn btn-success">Edit</button>
+                <button type="button" class="btn btn-danger">Hapus</button>
             </td>
         </tr>
     </tbody>

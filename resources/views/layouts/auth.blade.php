@@ -1,13 +1,14 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Gogi - Admin and Dashboard Template</title>
+    <title>@yield('title')</title>
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="{{ url('assets/media/image/favicon.png') }}"/>
+    <link rel="shortcut icon" href="{{ url('assets/media/image/favicon.png') }}" />
 
     <!-- Plugin styles -->
     <link rel="stylesheet" href="{{ url('vendors/bundle.css') }}" type="text/css">
@@ -15,30 +16,32 @@
     <!-- App styles -->
     <link rel="stylesheet" href="{{ url('assets/css/app.min.css') }}" type="text/css">
 </head>
+
 <body class="form-membership">
 
-<!-- begin::preloader-->
-<div class="preloader">
-    <div class="preloader-icon"></div>
-</div>
-<!-- end::preloader -->
-
-<div class="form-wrapper">
-
-    <!-- logo -->
-    <div id="logo">
-        <img src="{{ url('assets/media/image/dark-logo.png') }}" alt="image">
+    <!-- begin::preloader-->
+    <div class="preloader">
+        <div class="preloader-icon"></div>
     </div>
-    <!-- ./ logo -->
+    <!-- end::preloader -->
 
-    @yield('content')
+    <div class="form-wrapper">
 
-</div>
+        <!-- logo -->
+        <div id="logo">
+            <img src="{{ url('assets/media/image/dark-logo.png') }}" alt="image">
+        </div>
+        <!-- ./ logo -->
 
-<!-- Plugin scripts -->
-<script src="{{ url('vendors/bundle.js') }}"></script>
+        @yield('content')
 
-<!-- App scripts -->
-<script src="{{ url('assets/js/app.min.js') }}"></script>
+    </div>
+
+    <!-- Plugin scripts -->
+    <script src="{{ url('vendors/bundle.js') }}"></script>
+
+    <!-- App scripts -->
+    <script src="{{ url('assets/js/app.min.js') }}"></script>
 </body>
+
 </html>

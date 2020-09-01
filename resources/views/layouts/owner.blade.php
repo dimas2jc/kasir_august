@@ -86,7 +86,7 @@
                             <li class="nav-item dropdown d-none d-md-block">
                                 <a href="#" class="nav-link" title="Actions" data-toggle="dropdown">Tambah</a>
                                 <div class="dropdown-menu">
-                                    <a href="#" class="dropdown-item">Tambah Pegawai</a>
+                                    <a href="{{url('inputPegawai')}}" class="dropdown-item">Tambah Pegawai</a>
                                 </div>
                             </li>
                         </ul>
@@ -174,7 +174,10 @@
                             </a>
                             <ul>
                                 <li>
-                                    <a href="#">Laporan Transaksi</a>
+                                    <a href="{{url('/laporan')}}">Laporan Transaksi</a>
+                                </li>
+                                <li>
+                                    <a href="{{url('/dataPegawai')}}">Data Pegawai</a>
                                 </li>
                             </ul>
                         </li>

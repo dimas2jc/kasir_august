@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('dashboard');
+    return view('owner.dashboard');
 })->name('dashboard');
 
 // User
@@ -31,8 +31,19 @@ Route::get('recovery-password', function () {
 // owner
 
 Route::get('/dataPegawai', function () {
-    return view('dataPegawai');
+    return view('owner.dataPegawai');
 });
+
 Route::get('/laporan', function () {
-    return view('laporan');
+    return view('owner.laporan');
 });
+
+Route::get('/inputPegawai', function () {
+    return view('owner.inputPegawai');
+});
+
+Route::get('/editDataPegawai', function () {
+    return view('owner.editDataPegawai');
+});
+
+// User
