@@ -46,4 +46,10 @@ Route::get('/editDataPegawai', function () {
     return view('owner.editDataPegawai');
 });
 
-// User
+
+
+// Admin Kasir
+
+Route::get('/kasir', function () {
+    return view('kasir.kasir');
+});
