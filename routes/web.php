@@ -27,6 +27,7 @@ Route::get('recovery-password', function () {
     return view('Auth.recovery-password');
 })->name('recovery-password');
 
+
 // owner
 
 Route::get('/dataPegawai', function () {
