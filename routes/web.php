@@ -30,10 +30,8 @@ Route::get('recovery-password', function () {
 
 // owner
 
-Route::get('/dataPegawai', function () {
-    return view('owner.dataPegawai');
-});
-
+Route::get('/dataPegawai', 'pegawaiController@index');
+Route::post('/hasilInput', 'pegawaiController@store');
 Route::get('/laporan', function () {
     return view('owner.laporan');
 });
@@ -41,6 +39,7 @@ Route::get('/laporan', function () {
 Route::get('/inputPegawai', function () {
     return view('owner.inputPegawai');
 });
+
 
 Route::get('/editDataPegawai', function () {
     return view('owner.editDataPegawai');

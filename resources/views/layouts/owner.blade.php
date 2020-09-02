@@ -83,12 +83,12 @@
                                     </form>
                                 </div>
                             </li>
-                            <li class="nav-item dropdown d-none d-md-block">
+                            <!-- <li class="nav-item dropdown d-none d-md-block">
                                 <a href="#" class="nav-link" title="Actions" data-toggle="dropdown">Tambah</a>
                                 <div class="dropdown-menu">
                                     <a href="{{url('inputPegawai')}}" class="dropdown-item">Tambah Pegawai</a>
                                 </div>
-                            </li>
+                            </li> -->
                         </ul>
                     </div>
 
@@ -178,6 +178,9 @@
                                 </li>
                                 <li>
                                     <a href="{{url('/dataPegawai')}}">Data Pegawai</a>
+                                </li>
+                                <li>
+                                    <a href="{{url('/inputPegawai')}}">Tambah Data Pegawai</a>
                                 </li>
                             </ul>
                         </li>

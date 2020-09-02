@@ -17,24 +17,22 @@
         </tr>
     </thead>
     <tbody>
+        @foreach($pegawai as $pg)
         <tr>
-            <td>1</td>
-            <td>Cloudias Imani Pradana</td>
-            <td>danapradana30@gmail.com</td>
-            <td>Cloumus30</td>
-            <td>Laki-laki</td>
-            <td>Kuwik</td>
+            <td>{{$pg ->id_pegawai}}</td>
+            <td>{{$pg ->nama}}</td>
+            <td>{{$pg ->email}}</td>
+            <td>{{$pg ->password}}</td>
+            <td>{{$pg ->jenis_kelamin}}</td>
+            <td>{{$pg ->alamat}}</td>
             <td>
-                <button type="submit" class="btn btn-success">Edit</button>
+                <a href="{{url('/editDataPegawai')}}" class="text-light">
+                    <button type="submit" class="btn btn-success">Edit</button>
+                </a>
                 <button type="button" class="btn btn-danger">Hapus</button>
             </td>
         </tr>
+        @endforeach
     </tbody>
 </table>
-@endsection
-
-@section('script')
-$(document).ready(function (){
-$('#myTable').DataTable();
-});
 @endsection
