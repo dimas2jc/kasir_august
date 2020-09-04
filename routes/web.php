@@ -32,8 +32,8 @@ Route::get('recovery-password', function () {
 
 Route::get('/dataPegawai', 'pegawaiController@index');
 Route::post('/dataPegawai/insert', 'pegawaiController@store');
-Route::get('editDataPegawai/{id}', 'pegawaiController@show');
-Route::post('editDataPegawai/{id}', 'pegawaiController@update');
+Route::post('editDataPegawai/update/{id}', 'pegawaiController@update');
+
 Route::get('/laporan', function () {
     return view('owner.laporan');
 });

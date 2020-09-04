@@ -61,10 +61,8 @@ class pegawaiController extends Controller
      */
     public function show($id)
     {
-        //show edit pegawai
-        $pegawai = DB::table('data_kasir')->where('id_pegawai', '=', $id)->get();
-        // dump($pegawai);
-        return view('owner.editDataPegawai', ['pegawai' => $pegawai]);
+        //
+
     }
 
     /**
@@ -100,7 +98,7 @@ class pegawaiController extends Controller
                 'alamat' => $request->alamat,
                 'status' => $request->status
             ]);
-        return view('owner.sukses');
+        return redirect('/dataPegawai');
     }
 
     /**
