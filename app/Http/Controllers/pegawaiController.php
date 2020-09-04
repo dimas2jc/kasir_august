@@ -50,7 +50,7 @@ class pegawaiController extends Controller
                 'status' => $request->status
             ]
         );
-        return redirect('/dataPegawai');
+        return view('owner.dataPegawai');
     }
 
     /**
