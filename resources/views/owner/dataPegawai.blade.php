@@ -72,14 +72,14 @@
                                             <legend class="col-form-label col-sm-4 pt-0">Jenis Kelamin<span class="text-danger">*</span></legend>
                                             <div class="col-sm-6">
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="jenisKelamin" id="gridRadios1" value="Laki-laki" required>
-                                                    <label class="form-check-label" for="gridRadios1">
+                                                    <input class="form-check-input" type="radio" name="jenisKelamin" id="lakilaki" value="Laki-laki" required>
+                                                    <label class="form-check-label" for="lakilaki">
                                                         Laki-laki
                                                     </label>
                                                 </div>
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="jenisKelamin" id="gridRadios2" value="Perempuan">
-                                                    <label class="form-check-label" for="gridRadios2">
+                                                    <input class="form-check-input" type="radio" name="jenisKelamin" id="perempuan" value="Perempuan">
+                                                    <label class="form-check-label" for="perempuan">
                                                         Perempuan
                                                     </label>
                                                 </div>
@@ -157,14 +157,14 @@
                             <legend class="col-form-label col-sm-4 pt-0">Jenis Kelamin<span class="text-danger">*</span></legend>
                             <div class="col-sm-6">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="jenisKelamin" id="gridRadios1" value="Laki-laki" required>
-                                    <label class="form-check-label" for="gridRadios1">
+                                    <input class="form-check-input" type="radio" name="jenisKelamin" id="lakilaki" value="Laki-laki" required>
+                                    <label class="form-check-label" for="lakilaki">
                                         Laki-laki
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="jenisKelamin" id="gridRadios2" value="Perempuan">
-                                    <label class="form-check-label" for="gridRadios2">
+                                    <input class="form-check-input" type="radio" name="jenisKelamin" id="perempuan" value="Perempuan">
+                                    <label class="form-check-label" for="perempuan">
                                         Perempuan
                                     </label>
                                 </div>
