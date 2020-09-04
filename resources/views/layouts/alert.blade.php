@@ -27,7 +27,7 @@
 
     <div class="form-wrapper">
         <div class="col-lg-1">
-            <a href="{{url('/')}}"><i class="fa fa-chevron-left"></i></a>
+            <a href="{{url('/dataPegawai')}}"><i class="fa fa-chevron-left"></i></a>
         </div>
         <!-- logo -->
         <div id="logo">

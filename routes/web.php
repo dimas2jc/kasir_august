@@ -12,8 +12,9 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
 Route::get('/', function () {
-    return view('dashboard');
+    return view('owner.dashboard');
 })->name('dashboard');
 
 // User
@@ -26,20 +27,30 @@ Route::get('recovery-password', function () {
     return view('Auth.recovery-password');
 })->name('recovery-password');
 
-// For Owner
+
+// owner
+
+Route::get('/dataPegawai', 'pegawaiController@index');
+Route::post('/dataPegawai/insert', 'pegawaiController@store');
+Route::get('editDataPegawai/{id}', 'pegawaiController@show');
+Route::post('editDataPegawai/{id}', 'pegawaiController@update');
+Route::get('/laporan', function () {
+    return view('owner.laporan');
+});
+
+Route::get('/inputPegawai', function () {
+    return view('owner.inputPegawai');
+});
+
+
+Route::get('/editDataPegawai', function () {
+    return view('owner.editDataPegawai');
+});
 
 
 
+// Admin Kasir
 
-
-
-
-
-
-
-
-
-
-
-
-// For Admin Kasir
+Route::get('/kasir', function () {
+    return view('kasir.kasir');
+});
