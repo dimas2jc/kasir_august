@@ -4,9 +4,9 @@
 
 @section('content')
 <h6>DATA PEGAWAI KASIR</h6>
-<a href="#">
+//<a href="#">
     <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Tambah Pegawai</button>
-</a>
+//</a>
 <table id="myTable" class="table table-striped table-bordered mt-3">
     <thead>
         <tr>
@@ -53,7 +53,7 @@
             </div>
             <!-- Form Input Data Pegawai -->
             <div class="modal-body">
-                <form method="post" action="/dataPegawai/insert">
+                <form method="post" action="{{url('/dataPegawai/insert')}}">
                     @csrf
                     <div class="form-group row">
                         <label for="nama" class="col-sm-3 col-form-label">Nama <span class="text-danger">*</span></label>
