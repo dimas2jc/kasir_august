@@ -46,7 +46,8 @@ class pegawaiController extends Controller
                 'email' => $request->email,
                 'password' => $request->password,
                 'jenis_kelamin' => $request->jenisKelamin,
-                'alamat' => $request->alamat
+                'alamat' => $request->alamat,
+                'status' => $request->status
             ]
         );
         return view('owner.sukses');
@@ -60,7 +61,10 @@ class pegawaiController extends Controller
      */
     public function show($id)
     {
-        //
+        //show edit pegawai
+        $pegawai = DB::table('data_kasir')->where('id_pegawai', '=', $id)->get();
+        // dump($pegawai);
+        return view('owner.editDataPegawai', ['pegawai' => $pegawai]);
     }
 
     /**
@@ -71,7 +75,8 @@ class pegawaiController extends Controller
      */
     public function edit($id)
     {
-        //
+        //Update atau edit Data Pegawai
+
     }
 
     /**
@@ -84,6 +89,18 @@ class pegawaiController extends Controller
     public function update(Request $request, $id)
     {
         //
+        // dump($request);
+        DB::table('data_kasir')
+            ->where('id_pegawai', $id)
+            ->update([
+                'nama' => $request->nama,
+                'email' => $request->email,
+                'password' => $request->password,
+                'jenis_kelamin' => $request->jenisKelamin,
+                'alamat' => $request->alamat,
+                'status' => $request->status
+            ]);
+        return view('owner.sukses');
     }
 
     /**
@@ -94,6 +111,6 @@ class pegawaiController extends Controller
      */
     public function destroy($id)
     {
-        //
+        //Delete data pegawai
     }
 }
