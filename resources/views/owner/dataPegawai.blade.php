@@ -53,7 +53,7 @@
             </div>
             <!-- Form Input Data Pegawai -->
             <div class="modal-body">
-                <form method="post" action="/dataPegawai">
+                <form method="post" action="{{url('/dataPegawai/insert')}}">
                     @csrf
                     <div class="form-group row">
                         <label for="nama" class="col-sm-3 col-form-label">Nama <span class="text-danger">*</span></label>
