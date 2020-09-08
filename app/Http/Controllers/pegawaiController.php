@@ -50,9 +50,14 @@ class pegawaiController extends Controller
                 'status' => $request->status
             ]
         );
-        return redirect('/dataPegawai');
+
+        echo ("<script>alert('berhasil input')</script>");
+        echo (redirect('/dataPegawai'));
     }
 
+    public function alerts($url)
+    {
+    }
     /**
      * Display the specified resource.
      *
@@ -98,7 +103,8 @@ class pegawaiController extends Controller
                 'alamat' => $request->alamat,
                 'status' => $request->status
             ]);
-        return redirect('/dataPegawai');
+        echo ("<script>alert('berhasil Update')</script>");
+        echo (redirect('/dataPegawai'));
     }
 
     /**

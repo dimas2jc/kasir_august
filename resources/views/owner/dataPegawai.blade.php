@@ -5,7 +5,7 @@
 @section('content')
 <h6>DATA PEGAWAI KASIR</h6>
 <!-- <a href="#"> -->
-<button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Tambah Pegawai</button>
+<button class="btn btn-primary" data-toggle="modal" data-target="#inputModal">Tambah Pegawai</button>
 <!-- </a> -->
 <table id="myTable" class="table table-striped table-bordered mt-3">
     <thead>
@@ -103,7 +103,7 @@
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 
-                                    <button type="submit" class="btn btn-primary">Tambah</button>
+                                    <button type="submit" class="btn btn-primary">Update</button>
 
                                 </div>
                             </form>
@@ -119,7 +119,7 @@
 </table>
 
 <!-- Modal Input Data Pegawai -->
-<div class="modal" tabindex="-1" role="dialog" id="exampleModal">
+<div class="modal" tabindex="-1" role="dialog" id="inputModal">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <!-- Form Input Data Pegawai -->
