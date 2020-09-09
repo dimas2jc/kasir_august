@@ -33,7 +33,7 @@ Route::get('recovery-password', function () {
 Route::get('/dataPegawai', 'pegawaiController@index');
 Route::post('/dataPegawai/insert', 'pegawaiController@store');
 Route::post('editDataPegawai/update/{id}', 'pegawaiController@update');
-
+Route::get('/dataPegawai/search', 'pegawaiController@search');
 Route::get('/laporan', function () {
     return view('owner.laporan');
 });

@@ -7,6 +7,14 @@
 <!-- <a href="#"> -->
 <button class="btn btn-primary" data-toggle="modal" data-target="#inputModal">Tambah Pegawai</button>
 <!-- </a> -->
+<form action="/dataPegawai/search" method="get">
+    <div class="form-group row">
+        <div class="col-sm-4 mt-4">
+            <input type="text" class="form-control" id="cari" placeholder="Cari nama" name="cari" value="{{old('cari')}}">
+        </div>
+        <button type="submit" class="btn btn-primary mt-4">Cari</button>
+    </div>
+</form>
 <table id="myTable" class="table table-striped table-bordered mt-3">
     <thead>
         <tr>
@@ -117,6 +125,7 @@
         @endforeach
     </tbody>
 </table>
+{{ $pegawai->appends(Request::except('page'))->links() }}
 
 <!-- Modal Input Data Pegawai -->
 <div class="modal" tabindex="-1" role="dialog" id="inputModal">

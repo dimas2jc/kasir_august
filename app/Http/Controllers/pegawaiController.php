@@ -15,7 +15,7 @@ class pegawaiController extends Controller
     public function index()
     {
         //tampilkan data pegawai
-        $pegawai = DB::table('data_kasir')->get();
+        $pegawai = DB::table('data_kasir')->paginate(10);
         // dump($pegawai);
         return view('owner.dataPegawai', ['pegawai' => $pegawai]);
     }
@@ -55,9 +55,7 @@ class pegawaiController extends Controller
         echo (redirect('/dataPegawai'));
     }
 
-    public function alerts($url)
-    {
-    }
+
     /**
      * Display the specified resource.
      *
@@ -116,5 +114,16 @@ class pegawaiController extends Controller
     public function destroy($id)
     {
         //Delete data pegawai
+    }
+
+    public function search(Request $request)
+    {
+        // Cari data 
+        $cari = $request->cari;
+
+        $pegawai = DB::table("data_kasir")
+            ->where('nama', 'like', "%" . $cari . "%")->paginate();
+
+        return view('owner.dataPegawai', ['pegawai' => $pegawai]);
     }
 }
