@@ -180,6 +180,9 @@
                                 <li>
                                     <a href="{{url('/dataPegawai')}}">Data Pegawai</a>
                                 </li>
+                                <li>
+                                    <a href="{{url('/dataBarang')}}">Data Barang</a>
+                                </li>
                             </ul>
                         </li>
                     </ul>

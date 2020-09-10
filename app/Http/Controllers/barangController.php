@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
-class pegawaiController extends Controller
+class barangController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,10 +14,9 @@ class pegawaiController extends Controller
      */
     public function index()
     {
-        //tampilkan data pegawai
-        $pegawai = DB::table('data_kasir')->paginate(25);
-        // dump($pegawai);
-        return view('owner.dataPegawai', ['pegawai' => $pegawai]);
+        //menampilkan daftar Barang yang ada
+        $barang = DB::table('data_barang')->get();
+        return view('owner.dataBarang', ['barang' => $barang]);
     }
 
     /**
@@ -27,8 +26,7 @@ class pegawaiController extends Controller
      */
     public function create()
     {
-        // 
-
+        //
     }
 
     /**
@@ -39,22 +37,16 @@ class pegawaiController extends Controller
      */
     public function store(Request $request)
     {
-        //Input Data pegawai baru
-        DB::table('data_kasir')->insert(
-            [
-                'nama' => $request->nama,
-                'email' => $request->email,
-                'password' => $request->password,
-                'jenis_kelamin' => $request->jenisKelamin,
-                'alamat' => $request->alamat,
-                'status' => $request->status
-            ]
-        );
-
+        //Input data barang ke database
+        DB::table('data_barang')->insert([
+            'tanggal_input' => $request->tanggal,
+            'nama' => $request->nama,
+            'harga' => $request->harga,
+            'stock' => $request->stock
+        ]);
         echo ("<script>alert('berhasil input')</script>");
-        echo (redirect('/dataPegawai'));
+        echo (redirect('/dataBarang'));
     }
-
 
     /**
      * Display the specified resource.
@@ -65,7 +57,6 @@ class pegawaiController extends Controller
     public function show($id)
     {
         //
-
     }
 
     /**
@@ -76,7 +67,7 @@ class pegawaiController extends Controller
      */
     public function edit($id)
     {
-        //Update atau edit Data Pegawai
+        //
 
     }
 
@@ -89,20 +80,15 @@ class pegawaiController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
-        // dump($request);
-        DB::table('data_kasir')
-            ->where('id_pegawai', $id)
-            ->update([
-                'nama' => $request->nama,
-                'email' => $request->email,
-                'password' => $request->password,
-                'jenis_kelamin' => $request->jenisKelamin,
-                'alamat' => $request->alamat,
-                'status' => $request->status
-            ]);
-        echo ("<script>alert('berhasil Update')</script>");
-        echo (redirect('/dataPegawai'));
+        //Update Data Barang
+        DB::table('data_barang')->where('id_barang', $id)->update([
+            'tanggal_input' => $request->tanggal,
+            'nama' => $request->nama,
+            'harga' => $request->harga,
+            'stock' => $request->stock
+        ]);
+        echo ("<script>alert('berhasil update')</script>");
+        echo (redirect('/dataBarang'));
     }
 
     /**
@@ -113,17 +99,17 @@ class pegawaiController extends Controller
      */
     public function destroy($id)
     {
-        //Delete data pegawai
+        //Menghapus Data
+        DB::table('data_barang')->where('id_barang', $id)->delete();
+        echo ("<script>alert('Barang berhasil Dihapus')</script>");
+        echo (redirect('/dataBarang'));
     }
 
     public function search(Request $request)
     {
-        // Cari data 
         $cari = $request->cari;
 
-        $pegawai = DB::table("data_kasir")
-            ->where('nama', 'like', "%" . $cari . "%")->paginate();
-
-        return view('owner.dataPegawai', ['pegawai' => $pegawai]);
+        $barang = DB::table('data_barang')->where('nama', 'like', '%' . $cari . '%')->get();
+        return view('owner.dataBarang', ['barang' => $barang]);
     }
 }

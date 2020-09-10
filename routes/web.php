@@ -37,15 +37,13 @@ Route::get('/dataPegawai/search', 'pegawaiController@search');
 Route::get('/laporan', function () {
     return view('owner.laporan');
 });
+Route::get('/dataBarang', 'barangController@index');
+Route::post('/dataBarang/insert', 'barangController@store');
+Route::post('/dataBarang/update/{id}', 'barangController@update');
+Route::get('/dataBarang/delete/{id}', 'barangController@destroy');
+Route::get('/dataBarang/search', 'barangController@search');
 
-Route::get('/inputPegawai', function () {
-    return view('owner.inputPegawai');
-});
 
-
-Route::get('/editDataPegawai', function () {
-    return view('owner.editDataPegawai');
-});
 
 
 
